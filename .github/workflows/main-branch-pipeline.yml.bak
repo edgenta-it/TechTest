@@ -1,0 +1,89 @@
+name: main-branch-pipeline
+on:
+ push:
+  branches:
+   - 'main'
+jobs:
+ run-sonarqube-scan:
+  name: Run SonarQube Scan
+  runs-on: [self-hosted, Windows, on-prem, avowstech]
+
+  steps:
+   - uses: actions/checkout@v2.2.0
+     with:
+     # Disabling shallow clone is recommended for improving relevancy of sonarqube reporting
+      fetch-depth: 0
+   - name: Setup dotnet
+     uses: actions/setup-dotnet@v1
+     with:
+      dotnet-version: '5.0.x'
+   - name: Install dependencies
+     run: dotnet restore
+   #- name: Import SonarQube Secrets from Vault
+   #  uses: hashicorp/vault-action@v2.4.0
+   #  with:
+   #   url: ${{ secrets.VAULT_ADDR }}
+   #   method: approle
+   #   roleId: ${{ secrets.VAULT_ROLE_ID }}
+   #   secretId: ${{ secrets.VAULT_SECRET_ID }}
+   #   secrets: |
+   #     tech-coe-dev/data/blms-azure/development SONAR_PROJECT_KEY | SONAR_PROJECT_KEY ;
+   #     tech-coe-dev/data/edgenta-it SONAR_HOST_URL | SONAR_HOST_URL ;
+   #     tech-coe-dev/data/edgenta-it SONAR_TOKEN | SONAR_TOKEN
+   #- name: Sonarqube Begin
+   #  run: dotnet /opt/sonar-scanner-msbuild-5.4.1.41282-net5.0/SonarScanner.MSBuild.dll begin /k:${{ env.SONAR_PROJECT_KEY }} /d:sonar.host.url=${{ env.SONAR_HOST_URL }} /d:sonar.login=${{ env.SONAR_TOKEN }} /d:sonar.cs.vstest.reportsPaths="**/*.trx" /d:sonar.cs.opencover.reportsPaths="**/coverage.opencover.xml"
+   #- name: Build
+   #  run: dotnet build
+   #- name: Test with the dotnet CLI
+   #  run: dotnet test --settings coverlet.runsettings --logger:trx
+   #- name: Sonarqube end
+   #  run: dotnet /opt/sonar-scanner-msbuild-5.4.1.41282-net5.0/SonarScanner.MSBuild.dll end /d:sonar.login=${{ env.SONAR_TOKEN }}
+ 
+ #docker-build-and-push:
+ # name: Docker Build And Push
+ # runs-on: [self-hosted, onpremdti]
+
+ # steps:
+ #  - name: Checkout code
+ #    uses: actions/checkout@v2.2.0
+ #  - name: Set up Docker Buildx
+ #    uses: docker/setup-buildx-action@v1
+ #  - name: Import Docker Hub & GPG_PASSPHRASE Secrets from Vault
+ #    uses: hashicorp/vault-action@v2.4.0
+ #    with:
+ #     url: ${{ secrets.VAULT_ADDR }}
+ #     method: approle
+ #     roleId: ${{ secrets.VAULT_ROLE_ID }}
+ #     secretId: ${{ secrets.VAULT_SECRET_ID }}
+ #     secrets: |
+ #       tech-coe-dev/data/edgenta-it DOCKERHUB_USERNAME | DOCKERHUB_USERNAME ;
+ #       tech-coe-dev/data/edgenta-it DOCKERHUB_TOKEN | DOCKERHUB_TOKEN ;
+ #       tech-coe-dev/data/edgenta-it GPG_PASSPHRASE | GPG_PASSPHRASE
+ #  - name: Login to DockerHub
+ #    uses: docker/login-action@v1
+ #    with:
+ #     username: ${{ env.DOCKERHUB_USERNAME }}
+ #     password: ${{ env.DOCKERHUB_TOKEN }}
+ #  - name: Build and push
+ #    uses: docker/build-push-action@v2
+ #    with:
+ #     push: true
+ #     tags: ${{ env.DOCKERHUB_USERNAME }}/blms-azure:${{ github.sha }}
+ #  - name: Decrypt kube_config file
+ #    run: |
+ #       gpg --quiet --batch --yes --decrypt --passphrase=${{ env.GPG_PASSPHRASE }} \
+ #       --output ./kube_config/rke-dev-clu01-github-sa-kubeconfig.yml.yml ./kube_config/rke-dev-clu01-github-sa-kubeconfig.yml.gpg
+ #       ls ./kube_config
+ #deploy-app-dev:
+ # name: Deploy App to Dev Rancher Cluster
+ # runs-on: [self-hosted, onpremdti]
+ # needs: [docker-build-and-push, run-sonarqube-scan]
+
+ # steps:
+ #  - name: Checkout code
+ #    uses: actions/checkout@v2.2.0
+ #  - name: set KUBECONFIG
+ #    run: |
+ #     export KUBECONFIG=/home/devopsteam/workspace/kube-configs/rke-dev-clu01-github-sa-kubeconfig.yml
+ #     sed -i "s/<IMAGE_VERSION>/${{ github.sha }}/g" dev-deployment.yml    
+ #     kubectl -n tech-coe-dev apply -f dev-deployment.yml

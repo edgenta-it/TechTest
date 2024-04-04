@@ -1,0 +1,91 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: edgenta-api-deployment
+  labels:
+    app: edgenta-api-deployment
+  namespace: tech-coe-prod
+spec:
+  replicas: 3
+  revisionHistoryLimit: 0
+  selector:
+    matchLabels:
+      app: edgenta-api
+  template:
+    metadata:
+      labels:
+        app: edgenta-api
+      annotations:
+        vault.hashicorp.com/agent-inject: 'true'
+        vault.hashicorp.com/role: 'techcoe-dev'
+        vault.hashicorp.com/auth-path: 'auth/kubernetes-prod'
+        vault.hashicorp.com/agent-inject-secret-configs-api: 'tech-coe-dev/data/edgenta-api/production'
+        vault.hashicorp.com/agent-inject-secret-configs-edgenta: 'tech-coe-dev/data/edgenta-it'
+        vault.hashicorp.com/agent-inject-template-configs-api: |
+          {{ with secret "tech-coe-dev/data/edgenta-api/production" -}}
+          export ASPNETCORE_ENVIRONMENT="{{ .Data.data.ASPNETCORE_ENVIRONMENT }}"
+          export BLMS_SQLCONNSTR_DBCONNECTION="{{ .Data.data.BLMS_SQLCONNSTR_DBCONNECTION }}"
+          export NMM_SQLCONNSTR_DBCONNECTION="{{ .Data.data.NMM_SQLCONNSTR_DBCONNECTION }}"
+          {{- end }}
+        vault.hashicorp.com/agent-inject-template-configs-edgenta: |
+          {{ with secret "tech-coe-dev/data/edgenta-it" -}}
+          export ELASTIC_URL="{{ .Data.data.ELASTIC_URL }}"
+          {{- end }}
+    spec:
+      serviceAccountName: techcoe-dev
+      containers:
+      - name: edgenta-api
+        image: uemdevopsid/edgenta-api:<IMAGE_VERSION>
+        ports:
+        - containerPort: 80
+        env:
+        command: ["/bin/sh"]
+        args: ["-c", ". /vault/secrets/configs-api && . /vault/secrets/configs-edgenta && env >> /app/secret.txt && dotnet EdgentaWebAPI.dll"]
+      imagePullSecrets:
+      - name: regcred
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+      app: edgenta-api
+  name: edgenta-api-service
+  namespace: tech-coe-prod
+spec:
+  selector:
+    app: edgenta-api
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+      name: http
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: edgenta-api-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.org/client-max-body-size: "100m"
+    nginx.ingress.kubernetes.io/proxy-body-size: "100m"
+  namespace: tech-coe-prod
+spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+      - api.uemedgenta.com
+    secretName: tech-coe-prod-tls
+  rules:
+  - host: "api.uemedgenta.com"
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: edgenta-api-service
+            port:
+              number: 80

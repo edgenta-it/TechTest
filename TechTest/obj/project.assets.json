@@ -444,11 +444,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\azhar.yusof\\Desktop\\Test IV\\TechnologyOne\\TechTest\\TechTest.csproj",
+      "projectUniqueName": "C:\\Users\\azhar.yusof\\Desktop\\Test IV\\TechTest\\TechTest\\TechTest.csproj",
       "projectName": "TechTest",
-      "projectPath": "C:\\Users\\azhar.yusof\\Desktop\\Test IV\\TechnologyOne\\TechTest\\TechTest.csproj",
+      "projectPath": "C:\\Users\\azhar.yusof\\Desktop\\Test IV\\TechTest\\TechTest\\TechTest.csproj",
       "packagesPath": "C:\\Users\\azhar.yusof\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\azhar.yusof\\Desktop\\Test IV\\TechnologyOne\\TechTest\\obj\\",
+      "outputPath": "C:\\Users\\azhar.yusof\\Desktop\\Test IV\\TechTest\\TechTest\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
