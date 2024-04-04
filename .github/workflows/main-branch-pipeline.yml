@@ -30,7 +30,7 @@ jobs:
             tech-coe-dev/data/edgenta-it SONAR_HOST_URL | SONAR_HOST_URL ;
             tech-coe-dev/data/edgenta-it SONAR_TOKEN | SONAR_TOKEN
       - name: Begin SonarQube Scanning
-        run: dotnet sonarscanner begin /k:"project_key" /d:sonar.login=${{ env.SONAR_TOKEN }} /d:sonar.cs.opencover.reportsPaths=coverage.xml /d:sonar.cs.vstest.reportsPaths=**/*.trx
+        run: dotnet /home/devopsteam/sonar-scanner/SonarScanner.MSBuild.dll begin /k:${{ env.SONAR_PROJECT_KEY }} /d:sonar.host.url=${{ env.SONAR_HOST_URL }} /d:sonar.login=${{ env.SONAR_TOKEN }} /d:sonar.cs.vstest.reportsPaths="**/*.trx" /d:sonar.cs.opencover.reportsPaths="**/coverage.opencover.xml"
       - name: Build with dotnet
         run: dotnet build ./TechTest/TechTest.sln
       - name: Test with dotnet
