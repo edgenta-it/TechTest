@@ -38,7 +38,7 @@ jobs:
         run: dotnet test
       - name: End SonarQube Scanning
         run: |
-            sudo -E dotnet /path/to/sonar-scanner/SonarScanner.MSBuild.dll end /d:sonar.login=${{ env.SONAR_TOKEN }}
+            sudo -E dotnet /home/devopsteam/sonar-scanner/SonarScanner.MSBuild.dll end /d:sonar.login=${{ env.SONAR_TOKEN }}
 
   #docker-build-and-push:
   #  name: Docker Build And Push
