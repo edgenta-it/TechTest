@@ -17,20 +17,10 @@ The code demonstrates principles of encapsulation, where methods like GenerateRe
 Each method in the IOController class has a single responsibility, such as handling HTTP requests (Main method), generating results (GenerateResult method), and converting numbers to words (ConvertNumberToWords method).
 This adheres to the SRP, ensuring that each method is focused on a specific task, making the codebase more maintainable and easier to understand.
 
-**Modularity:**
-
-The code is modular, with distinct methods encapsulating specific functionality.
-This promotes code reuse and maintainability by allowing developers to modify or extend individual components without affecting the entire codebase.
-
 **Error Handling:**
 
 The code includes robust error handling mechanisms, with exceptions being caught and appropriate HTTP status codes returned to clients.
 This follows the principle of defensive programming, ensuring that the application can gracefully handle unexpected errors and provide meaningful feedback to users.
-
-**Separation of Concerns (SoC):**
-
-The IOController class separates concerns by handling HTTP request/response logic separately from business logic.
-This promotes code organization and maintainability by isolating different aspects of functionality within distinct components.
 
 **Code Readability and Maintainability:**
 
