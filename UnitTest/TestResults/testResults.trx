@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="bb27078d-151f-472c-ac25-806b0b939d76" name="azhar.yusof@EGBS1N10043471 2024-04-04 07:33:19" runUser="EDGENTA\azhar.yusof" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2024-04-04T07:33:19.3764068+08:00" queuing="2024-04-04T07:33:19.3764070+08:00" start="2024-04-04T07:33:18.6358722+08:00" finish="2024-04-04T07:33:19.3818497+08:00" />
+  <TestSettings name="default" id="9453ba40-f55b-449d-a268-787224b88f6a">
+    <Deployment runDeploymentRoot="azhar.yusof_EGBS1N10043471_2024-04-04_07_33_19" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="ad6ee252-b8b7-4009-ad51-68a5477f867b" testId="f60b4efe-133b-4ee8-66d7-f5e111196020" testName="TechTest.Tests.xUnitTechTest.ConvertToWords_InvalidInput_ReturnsError" computerName="EGBS1N10043471" duration="00:00:00.0071777" startTime="2024-04-04T07:33:19.2884703+08:00" endTime="2024-04-04T07:33:19.2884838+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ad6ee252-b8b7-4009-ad51-68a5477f867b">
+      <Output>
+        <StdOut>Error Message: Wrong input&#xD;
+ConvertToWords_InvalidInput_ReturnsError Test Passed!</StdOut>
+      </Output>
+    </UnitTestResult>
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="TechTest.Tests.xUnitTechTest.ConvertToWords_InvalidInput_ReturnsError" storage="c:\users\azhar.yusof\desktop\test iv\technologyone\unittest\bin\debug\net6.0\unittest.dll" id="f60b4efe-133b-4ee8-66d7-f5e111196020">
+      <Execution id="ad6ee252-b8b7-4009-ad51-68a5477f867b" />
+      <TestMethod codeBase="C:\Users\azhar.yusof\Desktop\Test IV\TechnologyOne\UnitTest\bin\Debug\net6.0\UnitTest.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="TechTest.Tests.xUnitTechTest" name="ConvertToWords_InvalidInput_ReturnsError" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="f60b4efe-133b-4ee8-66d7-f5e111196020" executionId="ad6ee252-b8b7-4009-ad51-68a5477f867b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.5.7+8f2703126a (64-bit .NET 6.0.20)&#xD;
+[xUnit.net 00:00:00.07]   Discovering: UnitTest&#xD;
+[xUnit.net 00:00:00.10]   Discovered:  UnitTest&#xD;
+[xUnit.net 00:00:00.11]   Starting:    UnitTest&#xD;
+[xUnit.net 00:00:00.16]   Finished:    UnitTest&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>
