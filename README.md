@@ -38,8 +38,6 @@ Unit tests can verify the behavior of individual methods, ensuring that they pro
 
 **Robust Error Handling:** The API includes robust error handling mechanisms to gracefully manage various input errors. It detects non-numerical inputs and delivers informative error messages to guide users towards correct usage.
 
-**Modular Design:** Built with a modular architecture, the codebase of the IOController API is organized into reusable and maintainable modules. This design enhances code readability and facilitates seamless integration into existing projects.
-
 ## Prerequisites
 
 **1. Operating System Compatibility**
