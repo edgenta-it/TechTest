@@ -34,7 +34,7 @@ jobs:
       - name: Build with dotnet
         run: dotnet build ./TechTest/TechTest.sln
       - name: Test with dotnet
-        run: dotnet test ./TechTest/TechTest.sln --settings coverlet.runsettings --logger:trx
+        run: dotnet test ./TechTest/TechTest.sln
       - name: End SonarQube Scanning
         run: dotnet /home/devopsteam/sonar-scanner/SonarScanner.MSBuild.dll end /d:sonar.login=${{ env.SONAR_TOKEN }}
 
