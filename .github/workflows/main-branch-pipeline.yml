@@ -6,7 +6,7 @@ on:
 jobs:
   run-sonarqube-scan:
     name: Code analyze API and xUnit using SonarQube
-    runs-on: [self-hosted, azure]
+    runs-on: [self-hosted, public]
 
     steps:
       - uses: actions/checkout@v4
