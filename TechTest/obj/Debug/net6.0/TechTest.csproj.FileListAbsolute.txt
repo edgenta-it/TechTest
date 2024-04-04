@@ -1,64 +1,32 @@
-C:\Users\azhar.yusof\Desktop\Test IV\TechnologyOne\TechTest\bin\Debug\net6.0\appsettings.Development.json
-C:\Users\azhar.yusof\Desktop\Test IV\TechnologyOne\TechTest\bin\Debug\net6.0\appsettings.json
-C:\Users\azhar.yusof\Desktop\Test IV\TechnologyOne\TechTest\bin\Debug\net6.0\TechTest.exe
-C:\Users\azhar.yusof\Desktop\Test IV\TechnologyOne\TechTest\bin\Debug\net6.0\TechTest.deps.json
-C:\Users\azhar.yusof\Desktop\Test IV\TechnologyOne\TechTest\bin\Debug\net6.0\TechTest.runtimeconfig.json
-C:\Users\azhar.yusof\Desktop\Test IV\TechnologyOne\TechTest\bin\Debug\net6.0\TechTest.dll
-C:\Users\azhar.yusof\Desktop\Test IV\TechnologyOne\TechTest\bin\Debug\net6.0\TechTest.pdb
-C:\Users\azhar.yusof\Desktop\Test IV\TechnologyOne\TechTest\bin\Debug\net6.0\Microsoft.OpenApi.dll
-C:\Users\azhar.yusof\Desktop\Test IV\TechnologyOne\TechTest\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
-C:\Users\azhar.yusof\Desktop\Test IV\TechnologyOne\TechTest\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-C:\Users\azhar.yusof\Desktop\Test IV\TechnologyOne\TechTest\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Users\azhar.yusof\Desktop\Test IV\TechnologyOne\TechTest\obj\Debug\net6.0\TechTest.csproj.AssemblyReference.cache
-C:\Users\azhar.yusof\Desktop\Test IV\TechnologyOne\TechTest\obj\Debug\net6.0\TechTest.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\azhar.yusof\Desktop\Test IV\TechnologyOne\TechTest\obj\Debug\net6.0\TechTest.AssemblyInfoInputs.cache
-C:\Users\azhar.yusof\Desktop\Test IV\TechnologyOne\TechTest\obj\Debug\net6.0\TechTest.AssemblyInfo.cs
-C:\Users\azhar.yusof\Desktop\Test IV\TechnologyOne\TechTest\obj\Debug\net6.0\TechTest.csproj.CoreCompileInputs.cache
-C:\Users\azhar.yusof\Desktop\Test IV\TechnologyOne\TechTest\obj\Debug\net6.0\TechTest.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\azhar.yusof\Desktop\Test IV\TechnologyOne\TechTest\obj\Debug\net6.0\TechTest.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\azhar.yusof\Desktop\Test IV\TechnologyOne\TechTest\obj\Debug\net6.0\staticwebassets\msbuild.TechTest.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\azhar.yusof\Desktop\Test IV\TechnologyOne\TechTest\obj\Debug\net6.0\staticwebassets\msbuild.build.TechTest.props
-C:\Users\azhar.yusof\Desktop\Test IV\TechnologyOne\TechTest\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.TechTest.props
-C:\Users\azhar.yusof\Desktop\Test IV\TechnologyOne\TechTest\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.TechTest.props
-C:\Users\azhar.yusof\Desktop\Test IV\TechnologyOne\TechTest\obj\Debug\net6.0\staticwebassets.pack.json
-C:\Users\azhar.yusof\Desktop\Test IV\TechnologyOne\TechTest\obj\Debug\net6.0\staticwebassets.build.json
-C:\Users\azhar.yusof\Desktop\Test IV\TechnologyOne\TechTest\obj\Debug\net6.0\staticwebassets.development.json
-C:\Users\azhar.yusof\Desktop\Test IV\TechnologyOne\TechTest\obj\Debug\net6.0\scopedcss\bundle\TechTest.styles.css
-C:\Users\azhar.yusof\Desktop\Test IV\TechnologyOne\TechTest\obj\Debug\net6.0\TechTest.csproj.CopyComplete
-C:\Users\azhar.yusof\Desktop\Test IV\TechnologyOne\TechTest\obj\Debug\net6.0\TechTest.dll
-C:\Users\azhar.yusof\Desktop\Test IV\TechnologyOne\TechTest\obj\Debug\net6.0\refint\TechTest.dll
-C:\Users\azhar.yusof\Desktop\Test IV\TechnologyOne\TechTest\obj\Debug\net6.0\TechTest.pdb
-C:\Users\azhar.yusof\Desktop\Test IV\TechnologyOne\TechTest\obj\Debug\net6.0\TechTest.genruntimeconfig.cache
-C:\Users\azhar.yusof\Desktop\Test IV\TechnologyOne\TechTest\obj\Debug\net6.0\ref\TechTest.dll
-C:\Users\azhar.yusof\Desktop\Test IV\TechTest\TechTest\bin\Debug\net6.0\appsettings.Development.json
-C:\Users\azhar.yusof\Desktop\Test IV\TechTest\TechTest\bin\Debug\net6.0\appsettings.json
-C:\Users\azhar.yusof\Desktop\Test IV\TechTest\TechTest\bin\Debug\net6.0\TechTest.exe
-C:\Users\azhar.yusof\Desktop\Test IV\TechTest\TechTest\bin\Debug\net6.0\TechTest.deps.json
-C:\Users\azhar.yusof\Desktop\Test IV\TechTest\TechTest\bin\Debug\net6.0\TechTest.runtimeconfig.json
-C:\Users\azhar.yusof\Desktop\Test IV\TechTest\TechTest\bin\Debug\net6.0\TechTest.dll
-C:\Users\azhar.yusof\Desktop\Test IV\TechTest\TechTest\bin\Debug\net6.0\TechTest.pdb
-C:\Users\azhar.yusof\Desktop\Test IV\TechTest\TechTest\bin\Debug\net6.0\Microsoft.OpenApi.dll
-C:\Users\azhar.yusof\Desktop\Test IV\TechTest\TechTest\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
-C:\Users\azhar.yusof\Desktop\Test IV\TechTest\TechTest\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-C:\Users\azhar.yusof\Desktop\Test IV\TechTest\TechTest\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Users\azhar.yusof\Desktop\Test IV\TechTest\TechTest\obj\Debug\net6.0\TechTest.csproj.AssemblyReference.cache
-C:\Users\azhar.yusof\Desktop\Test IV\TechTest\TechTest\obj\Debug\net6.0\TechTest.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\azhar.yusof\Desktop\Test IV\TechTest\TechTest\obj\Debug\net6.0\TechTest.AssemblyInfoInputs.cache
-C:\Users\azhar.yusof\Desktop\Test IV\TechTest\TechTest\obj\Debug\net6.0\TechTest.AssemblyInfo.cs
-C:\Users\azhar.yusof\Desktop\Test IV\TechTest\TechTest\obj\Debug\net6.0\TechTest.csproj.CoreCompileInputs.cache
-C:\Users\azhar.yusof\Desktop\Test IV\TechTest\TechTest\obj\Debug\net6.0\TechTest.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\azhar.yusof\Desktop\Test IV\TechTest\TechTest\obj\Debug\net6.0\TechTest.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\azhar.yusof\Desktop\Test IV\TechTest\TechTest\obj\Debug\net6.0\staticwebassets\msbuild.TechTest.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\azhar.yusof\Desktop\Test IV\TechTest\TechTest\obj\Debug\net6.0\staticwebassets\msbuild.build.TechTest.props
-C:\Users\azhar.yusof\Desktop\Test IV\TechTest\TechTest\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.TechTest.props
-C:\Users\azhar.yusof\Desktop\Test IV\TechTest\TechTest\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.TechTest.props
-C:\Users\azhar.yusof\Desktop\Test IV\TechTest\TechTest\obj\Debug\net6.0\staticwebassets.pack.json
-C:\Users\azhar.yusof\Desktop\Test IV\TechTest\TechTest\obj\Debug\net6.0\staticwebassets.build.json
-C:\Users\azhar.yusof\Desktop\Test IV\TechTest\TechTest\obj\Debug\net6.0\staticwebassets.development.json
-C:\Users\azhar.yusof\Desktop\Test IV\TechTest\TechTest\obj\Debug\net6.0\scopedcss\bundle\TechTest.styles.css
-C:\Users\azhar.yusof\Desktop\Test IV\TechTest\TechTest\obj\Debug\net6.0\TechTest.csproj.CopyComplete
-C:\Users\azhar.yusof\Desktop\Test IV\TechTest\TechTest\obj\Debug\net6.0\TechTest.dll
-C:\Users\azhar.yusof\Desktop\Test IV\TechTest\TechTest\obj\Debug\net6.0\refint\TechTest.dll
-C:\Users\azhar.yusof\Desktop\Test IV\TechTest\TechTest\obj\Debug\net6.0\TechTest.pdb
-C:\Users\azhar.yusof\Desktop\Test IV\TechTest\TechTest\obj\Debug\net6.0\TechTest.genruntimeconfig.cache
-C:\Users\azhar.yusof\Desktop\Test IV\TechTest\TechTest\obj\Debug\net6.0\ref\TechTest.dll
+C:\Users\azhar.yusof\Desktop\WebAPI\TechTest\TechTest\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\azhar.yusof\Desktop\WebAPI\TechTest\TechTest\bin\Debug\net6.0\appsettings.json
+C:\Users\azhar.yusof\Desktop\WebAPI\TechTest\TechTest\bin\Debug\net6.0\TechTest.exe
+C:\Users\azhar.yusof\Desktop\WebAPI\TechTest\TechTest\bin\Debug\net6.0\TechTest.deps.json
+C:\Users\azhar.yusof\Desktop\WebAPI\TechTest\TechTest\bin\Debug\net6.0\TechTest.runtimeconfig.json
+C:\Users\azhar.yusof\Desktop\WebAPI\TechTest\TechTest\bin\Debug\net6.0\TechTest.dll
+C:\Users\azhar.yusof\Desktop\WebAPI\TechTest\TechTest\bin\Debug\net6.0\TechTest.pdb
+C:\Users\azhar.yusof\Desktop\WebAPI\TechTest\TechTest\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\azhar.yusof\Desktop\WebAPI\TechTest\TechTest\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\azhar.yusof\Desktop\WebAPI\TechTest\TechTest\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\azhar.yusof\Desktop\WebAPI\TechTest\TechTest\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\azhar.yusof\Desktop\WebAPI\TechTest\TechTest\obj\Debug\net6.0\TechTest.csproj.AssemblyReference.cache
+C:\Users\azhar.yusof\Desktop\WebAPI\TechTest\TechTest\obj\Debug\net6.0\TechTest.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\azhar.yusof\Desktop\WebAPI\TechTest\TechTest\obj\Debug\net6.0\TechTest.AssemblyInfoInputs.cache
+C:\Users\azhar.yusof\Desktop\WebAPI\TechTest\TechTest\obj\Debug\net6.0\TechTest.AssemblyInfo.cs
+C:\Users\azhar.yusof\Desktop\WebAPI\TechTest\TechTest\obj\Debug\net6.0\TechTest.csproj.CoreCompileInputs.cache
+C:\Users\azhar.yusof\Desktop\WebAPI\TechTest\TechTest\obj\Debug\net6.0\TechTest.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\azhar.yusof\Desktop\WebAPI\TechTest\TechTest\obj\Debug\net6.0\TechTest.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\azhar.yusof\Desktop\WebAPI\TechTest\TechTest\obj\Debug\net6.0\staticwebassets\msbuild.TechTest.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\azhar.yusof\Desktop\WebAPI\TechTest\TechTest\obj\Debug\net6.0\staticwebassets\msbuild.build.TechTest.props
+C:\Users\azhar.yusof\Desktop\WebAPI\TechTest\TechTest\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.TechTest.props
+C:\Users\azhar.yusof\Desktop\WebAPI\TechTest\TechTest\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.TechTest.props
+C:\Users\azhar.yusof\Desktop\WebAPI\TechTest\TechTest\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\azhar.yusof\Desktop\WebAPI\TechTest\TechTest\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\azhar.yusof\Desktop\WebAPI\TechTest\TechTest\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\azhar.yusof\Desktop\WebAPI\TechTest\TechTest\obj\Debug\net6.0\scopedcss\bundle\TechTest.styles.css
+C:\Users\azhar.yusof\Desktop\WebAPI\TechTest\TechTest\obj\Debug\net6.0\TechTest.csproj.CopyComplete
+C:\Users\azhar.yusof\Desktop\WebAPI\TechTest\TechTest\obj\Debug\net6.0\TechTest.dll
+C:\Users\azhar.yusof\Desktop\WebAPI\TechTest\TechTest\obj\Debug\net6.0\refint\TechTest.dll
+C:\Users\azhar.yusof\Desktop\WebAPI\TechTest\TechTest\obj\Debug\net6.0\TechTest.pdb
+C:\Users\azhar.yusof\Desktop\WebAPI\TechTest\TechTest\obj\Debug\net6.0\TechTest.genruntimeconfig.cache
+C:\Users\azhar.yusof\Desktop\WebAPI\TechTest\TechTest\obj\Debug\net6.0\ref\TechTest.dll

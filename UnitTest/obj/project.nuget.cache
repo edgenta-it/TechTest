@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "11So82jq7N3IZ77c6QfdHnrU213XtYEyyzW6UG0lXlVklAtsAo77rBM2DpoNd38eOX8lvR3HqCm819yKqt0l6A==",
+  "dgSpecHash": "J4WHGKjOWi9xB06jMiz+zXindYPjkNtI7TPWV7JlKRIoqAxyV0iWH1d0G1Kp6SPoZsV1cpJfFLys4CyOoZIsBQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\azhar.yusof\\Desktop\\Test IV\\TechTest\\UnitTest\\UnitTest.csproj",
   "expectedPackageFiles": [
@@ -98,7 +98,7 @@
     "C:\\Users\\azhar.yusof\\.nuget\\packages\\xunit.core\\2.4.2\\xunit.core.2.4.2.nupkg.sha512",
     "C:\\Users\\azhar.yusof\\.nuget\\packages\\xunit.extensibility.core\\2.4.2\\xunit.extensibility.core.2.4.2.nupkg.sha512",
     "C:\\Users\\azhar.yusof\\.nuget\\packages\\xunit.extensibility.execution\\2.4.2\\xunit.extensibility.execution.2.4.2.nupkg.sha512",
-    "C:\\Users\\azhar.yusof\\.nuget\\packages\\xunit.runner.visualstudio\\2.5.7\\xunit.runner.visualstudio.2.5.7.nupkg.sha512"
+    "C:\\Users\\azhar.yusof\\.nuget\\packages\\xunit.runner.visualstudio\\2.4.5\\xunit.runner.visualstudio.2.4.5.nupkg.sha512"
   ],
   "logs": []
 }

@@ -2,13 +2,13 @@ using Microsoft.AspNetCore.Mvc;
 using TechTest.Controllers;
 using Xunit.Abstractions;
 
-namespace TechTest.Tests
+namespace TestIO.Tests
 {
-    public class xUnitTechTest
+    public class TestIO
     {
         private readonly ITestOutputHelper output;
 
-        public xUnitTechTest(ITestOutputHelper output)
+        public TestIO(ITestOutputHelper output)
         {
             this.output = output;
         }

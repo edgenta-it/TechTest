@@ -1786,16 +1786,16 @@
           }
         }
       },
-      "xunit.runner.visualstudio/2.5.7": {
+      "xunit.runner.visualstudio/2.4.5": {
         "type": "package",
         "compile": {
-          "lib/net6.0/_._": {}
+          "lib/netcoreapp3.1/_._": {}
         },
         "runtime": {
-          "lib/net6.0/_._": {}
+          "lib/netcoreapp3.1/_._": {}
         },
         "build": {
-          "build/net6.0/xunit.runner.visualstudio.props": {}
+          "build/netcoreapp3.1/xunit.runner.visualstudio.props": {}
         }
       },
       "TechTest/1.0.0": {
@@ -5897,28 +5897,37 @@
         "xunit.extensibility.execution.nuspec"
       ]
     },
-    "xunit.runner.visualstudio/2.5.7": {
-      "sha512": "31Rl7dBJriX0DNwZfDp8gqFOPsiM0c9kqpcH/HvNi9vDp+K7Ydf42H7mVIvYT918Ywzn1ymLg1c4DDC6iU754w==",
+    "xunit.runner.visualstudio/2.4.5": {
+      "sha512": "OwHamvBdUKgqsXfBzWiCW/O98BTx81UKzx2bieIOQI7CZFE5NEQZGi8PBQGIKawDW96xeRffiNf20SjfC0x9hw==",
       "type": "package",
-      "path": "xunit.runner.visualstudio/2.5.7",
+      "path": "xunit.runner.visualstudio/2.4.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "_content/README.md",
-        "_content/logo-128-transparent.png",
+        "License.txt",
         "build/net462/xunit.abstractions.dll",
         "build/net462/xunit.runner.reporters.net452.dll",
         "build/net462/xunit.runner.utility.net452.dll",
         "build/net462/xunit.runner.visualstudio.props",
         "build/net462/xunit.runner.visualstudio.testadapter.dll",
-        "build/net6.0/xunit.abstractions.dll",
-        "build/net6.0/xunit.runner.reporters.netcoreapp10.dll",
-        "build/net6.0/xunit.runner.utility.netcoreapp10.dll",
-        "build/net6.0/xunit.runner.visualstudio.props",
-        "build/net6.0/xunit.runner.visualstudio.testadapter.dll",
+        "build/netcoreapp3.1/xunit.abstractions.dll",
+        "build/netcoreapp3.1/xunit.runner.reporters.netcoreapp10.dll",
+        "build/netcoreapp3.1/xunit.runner.utility.netcoreapp10.dll",
+        "build/netcoreapp3.1/xunit.runner.visualstudio.dotnetcore.testadapter.dll",
+        "build/netcoreapp3.1/xunit.runner.visualstudio.props",
+        "build/uap10.0.16299/xunit.runner.reporters.netstandard15.dll",
+        "build/uap10.0.16299/xunit.runner.utility.netstandard15.dll",
+        "build/uap10.0.16299/xunit.runner.utility.uwp10.dll",
+        "build/uap10.0.16299/xunit.runner.utility.uwp10.pri",
+        "build/uap10.0.16299/xunit.runner.visualstudio.props",
+        "build/uap10.0.16299/xunit.runner.visualstudio.targets",
+        "build/uap10.0.16299/xunit.runner.visualstudio.uwp.testadapter.dll",
+        "build/uap10.0.16299/xunit.runner.visualstudio.uwp.testadapter.pri",
         "lib/net462/_._",
-        "lib/net6.0/_._",
-        "xunit.runner.visualstudio.2.5.7.nupkg.sha512",
+        "lib/netcoreapp3.1/_._",
+        "lib/uap10.0.16299/_._",
+        "logo-512-transparent.png",
+        "xunit.runner.visualstudio.2.4.5.nupkg.sha512",
         "xunit.runner.visualstudio.nuspec"
       ]
     },
@@ -5934,7 +5943,7 @@
       "TechTest >= 1.0.0",
       "coverlet.collector >= 3.2.0",
       "xunit >= 2.4.2",
-      "xunit.runner.visualstudio >= 2.5.7"
+      "xunit.runner.visualstudio >= 2.4.5"
     ]
   },
   "packageFolders": {
@@ -6007,7 +6016,7 @@
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
             "target": "Package",
-            "version": "[2.5.7, )"
+            "version": "[2.4.5, )"
           }
         },
         "imports": [

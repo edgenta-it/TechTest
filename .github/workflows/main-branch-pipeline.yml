@@ -17,7 +17,7 @@ jobs:
         with:
          dotnet-version: '6.0.x'
       - name: Install dependencies
-        run: dotnet restore ./TechTest/TechTest.sln
+        run: dotnet restore
       - name: Import Secrets from Vault
         uses: hashicorp/vault-action@v2.4.0
         with:
@@ -34,7 +34,7 @@ jobs:
       - name: Build with dotnet
         run: dotnet build
       - name: Test with dotnet
-        run: dotnet test ./TechTest/TechTest.sln
+        run: dotnet test --settings coverlet.runsettings --logger:trx
       - name: End SonarQube Scanning
         run: dotnet /home/devopsteam/sonar-scanner/SonarScanner.MSBuild.dll end /d:sonar.login=${{ env.SONAR_TOKEN }}
 

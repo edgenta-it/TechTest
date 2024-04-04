@@ -2,8 +2,8 @@
 
 namespace TechTest.Controllers
 {
+    [Route("api/[controller]")]
     [ApiController]
-    [Route("[controller]")]
     public class IOController : ControllerBase
     {
         #region Main
