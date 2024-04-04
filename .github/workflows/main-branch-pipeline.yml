@@ -17,7 +17,7 @@ jobs:
         with:
          dotnet-version: '6.0.x'
       - name: Install dependencies
-        run: dotnet restore
+        run: dotnet restore ./TechTest/TechTest.sln
       - name: Import Secrets from Vault
         uses: hashicorp/vault-action@v2.4.0
         with:
