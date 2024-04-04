@@ -17,7 +17,7 @@ jobs:
         with:
          dotnet-version: '6.0.x'
       - name: Install dependencies
-        run: dotnet restore
+        run: dotnet restore ./TechTest/TechTest.csproj
       - name: Import Secrets from Vault
         uses: hashicorp/vault-action@v2.4.0
         with:
@@ -32,13 +32,12 @@ jobs:
       - name: Begin SonarQube Scanning
         run: dotnet /home/devopsteam/sonar-scanner/SonarScanner.MSBuild.dll begin /k:${{ env.SONAR_PROJECT_KEY }} /d:sonar.host.url=${{ env.SONAR_HOST_URL }} /d:sonar.login=${{ env.SONAR_TOKEN }} /d:sonar.cs.vstest.reportsPaths="**/*.trx" /d:sonar.cs.opencover.reportsPaths="**/coverage.opencover.xml"
       - name: Build with dotnet
-        run: dotnet build
+        run: dotnet build ./TechTest/TechTest.csproj
       - name: Test with dotnet
         #run: dotnet test --settings coverlet.runsettings --logger:trx
-        run: dotnet test
+        run: dotnet test ./TechTest/TechTest.csproj
       - name: End SonarQube Scanning
-        run: |
-            sudo -E dotnet /home/devopsteam/sonar-scanner/SonarScanner.MSBuild.dll end /d:sonar.login=${{ env.SONAR_TOKEN }}
+        run: dotnet /home/devopsteam/sonar-scanner/SonarScanner.MSBuild.dll end /d:sonar.login=${{ env.SONAR_TOKEN }}
 
   #docker-build-and-push:
   #  name: Docker Build And Push
