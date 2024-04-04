@@ -30,15 +30,14 @@ jobs:
             tech-coe-dev/data/edgenta-it SONAR_HOST_URL | SONAR_HOST_URL ;
             tech-coe-dev/data/edgenta-it SONAR_TOKEN | SONAR_TOKEN
       - name: Begin SonarQube Scanning
-        run: dotnet /home/devopsteam/sonar-scanner/sonar-scanner-5.0.1.3006/bin/sonar-scanner begin /k:${{ env.SONAR_PROJECT_KEY }} /d:sonar.host.url=${{ env.SONAR_HOST_URL }} /d:sonar.login=${{ env.SONAR_TOKEN }} /d:sonar.cs.vstest.reportsPaths="**/*.trx" /d:sonar.cs.opencover.reportsPaths="**/coverage.opencover.xml"
+        run: dotnet /home/devopsteam/sonar-scanner/SonarScanner.MSBuild.dll begin /k:${{ env.SONAR_PROJECT_KEY }} /d:sonar.host.url=${{ env.SONAR_HOST_URL }} /d:sonar.login=${{ env.SONAR_TOKEN }} /d:sonar.cs.vstest.reportsPaths="**/*.trx" /d:sonar.cs.opencover.reportsPaths="**/coverage.opencover.xml"
       - name: Build with dotnet
         run: dotnet build
       - name: Test with dotnet
         #run: dotnet test --settings coverlet.runsettings --logger:trx
         run: dotnet test
       - name: End SonarQube Scanning
-        #run: dotnet /home/devopsteam/sonar-scanner/SonarScanner.MSBuild.dll end /d:sonar.login=${{ env.SONAR_TOKEN }}
-        run: dotnet /home/devopsteam/sonar-scanner/sonar-scanner-5.0.1.3006/bin/sonar-scanner end /d:sonar.login=${{ env.SONAR_TOKEN }}
+        run: dotnet /home/devopsteam/sonar-scanner/SonarScanner.MSBuild.dll end /d:sonar.login=${{ env.SONAR_TOKEN }}
 
   #docker-build-and-push:
   #  name: Docker Build And Push
