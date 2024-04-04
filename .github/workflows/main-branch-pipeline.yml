@@ -37,7 +37,7 @@ jobs:
         #run: dotnet test --settings coverlet.runsettings --logger:trx
         run: dotnet test
       - name: End SonarQube Scanning
-        run: dotnet /home/devopsteam/sonar-scanner/SonarScanner.MSBuild.dll end /d:sonar.login=${{ env.SONAR_TOKEN }}
+        run: dotnet /home/devopsteam/sonar-scanner/SonarScanner.MSBuild.dll end /d:sonar.login=${{ env.SONAR_TOKEN }} 2>&1 | tee sonar-scanner.log
 
   #docker-build-and-push:
   #  name: Docker Build And Push
