@@ -33,6 +33,8 @@ jobs:
         run: dotnet /home/devopsteam/sonar-scanner/SonarScanner.MSBuild.dll begin /k:${{ env.SONAR_PROJECT_KEY }} /d:sonar.host.url=${{ env.SONAR_HOST_URL }} /d:sonar.login=${{ env.SONAR_TOKEN }} /d:sonar.cs.vstest.reportsPaths="**/*.trx" /d:sonar.cs.opencover.reportsPaths="**/coverage.opencover.xml"
       - name: Build with dotnet
         run: dotnet build ./TechTest/TechTest.sln
+      - name: Test with dotnet
+        run: dotnet test --settings coverlet.runsettings --logger:trx
       - name: End SonarQube Scanning
         run: dotnet /home/devopsteam/sonar-scanner/SonarScanner.MSBuild.dll end /d:sonar.login=${{ env.SONAR_TOKEN }}
 
