@@ -147,6 +147,33 @@ cd <script-directory>
 ./TestValidInputScript.ps1
 ```
 
+## DockerFile
+
+This Dockerfile is used to containerize and deploy the project using Docker. It follows a multi-stage build process to optimize the resulting Docker image size and runtime performance.
+
+### Stages:
+
+**Base Image:**
+
+This stage sets up the runtime environment for the ASP.NET application.
+
+**build-env stage:**
+
+This stage prepares the application for deployment.
+
+**Build Process:**
+
+The Dockerfile starts by setting the working directory to /app.
+It copies the project file (TechTest.csproj) into the container and restores NuGet dependencies using dotnet restore.
+The entire application source code is copied into the container.
+The application is built in Release mode and published to the out directory using dotnet publish -c Release -o out.
+
+**Final Image:**
+
+The final stage (final) uses the base image from the base stage and sets the working directory to /app.
+It copies the published application from the build-env stage into the final image.
+The entry point for the container is specified as dotnet TechTest.dll, which runs the ASP.NET application.
+
 ## CI/CD Using GitHub Action
 
 This GitHub Actions workflow is designed to automate the continuous integration and deployment processes for the main branch of the project repository. It consists of two main jobs: run-sonarqube-scan and docker-build-and-push.
@@ -158,9 +185,6 @@ This GitHub Actions workflow is designed to automate the continuous integration 
 
 ### Purpose:
 This workflow automates the processes of code analysis using SonarQube and building/pushing Docker images. It ensures that code changes pushed to the main branch are analyzed for quality and security issues, and the resulting Docker image is built and deployed to DockerHub for further use.
-
-### Notes:
-Ensure that proper secrets are configured in the repository's settings to securely access sensitive information stored in HashiCorp Vault and DockerHub.
 
 ### Jobs:
 **1. run-sonarqube-scan:**
@@ -205,3 +229,6 @@ Ensure that proper secrets are configured in the repository's settings to secure
 **Login to DockerHub**: Logs in to DockerHub using the retrieved credentials with the docker/login-action action.
 
 **Build and push**: Builds the Docker image and pushes it to DockerHub using the docker/build-push-action.
+
+## Notes:
+HashiCorp Vault serves as a critical component in the CI/CD pipeline, enabling secure secret management, seamless integration with external services, and compliance with security best practices.
