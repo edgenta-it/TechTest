@@ -67,3 +67,40 @@ jobs:
         with:
           push: true
           tags: ${{ env.DOCKERHUB_USERNAME }}/techtest:${{ github.sha }}
+
+#deploy-app-prod:
+  #  name: Deploy App to Production Azure AKS Cluster
+  #  runs-on: [self-hosted, azure]
+  #  needs: [docker-build-and-push, run-sonarqube-scan]
+
+  #  steps:
+  #    - name: Checkout code
+  #      uses: actions/checkout@v2.2.0
+  #    - name: Import GPG_PASSPHRASE Secrets from Vault
+  #      uses: hashicorp/vault-action@v2.4.0
+  #      with:
+  #        url: ${{ secrets.VAULT_ADDR }}
+  #        method: approle
+  #        roleId: ${{ secrets.VAULT_ROLE_ID }}
+  #        secretId: ${{ secrets.VAULT_SECRET_ID }}
+  #        secrets: |
+  #          tech-coe-dev/data/edgenta-it GPG_PASSPHRASE | GPG_PASSPHRASE
+  #          tech-coe-dev/data/edgenta-it NAMESPACE | NAMESPACE
+  #          tech-coe-dev/data/edgenta-it DEPLOYMENT_NAME | DEPLOYMENT_NAME
+  #          tech-coe-dev/data/edgenta-it DEPLOYMENT_FILE | DEPLOYMENT_FILE
+  #          tech-coe-dev/data/edgenta-it KUBE_CONFIG_DECRYPTED | KUBE_CONFIG_DECRYPTED
+  #          tech-coe-dev/data/edgenta-it KUBE_CONFIG_ENCRYPTED | KUBE_CONFIG_ENCRYPTED
+  #    - name: Decrypt kube_config file
+  #      run: |
+  #        gpg --quiet --batch --yes --decrypt --passphrase=${{ env.GPG_PASSPHRASE }} --output ${{ env.KUBE_CONFIG_DECRYPTED }} ${{ env.KUBE_CONFIG_ENCRYPTED }}
+  #        ls ./kube_config
+  #    - name: Extract branch name
+  #      shell: bash
+  #      run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/releases/})"
+  #      id: extract_branch
+  #    - name: Deploy application to Production kubernetes cluster
+  #      run: |
+  #        export KUBECONFIG=${{ env.KUBE_CONFIG_DECRYPTED }}
+  #        kubectl -n ${{ env.NAMESPACE }} delete deployment ${{ env.DEPLOYMENT_NAME }}
+  #        sed -i "s/<IMAGE_VERSION>/${{ github.sha }}/g" ${{ env.DEPLOYMENT_FILE }}
+  #        kubectl -n ${{ env.NAMESPACE }} apply -f ${{ env.DEPLOYMENT_FILE }}
