@@ -218,5 +218,34 @@ This workflow automates the processes of code analysis using SonarQube and build
 
 **Build and push**: Builds the Docker image and pushes it to DockerHub using the docker/build-push-action.
 
+## Deployment to Azure AKS Cluster
+
+This GitHub Actions workflow automates the deployment of our application to the production Azure AKS (Azure Kubernetes Service) cluster.
+
+### Workflow Steps:
+
+**Checkout Code:**
+
+Checks out the repository's code to prepare for the deployment process.
+
+**Import GPG_PASSPHRASE Secrets from Vault:**
+
+Retrieves the GPG_PASSPHRASE secret from HashiCorp Vault to decrypt the kube_config file necessary for Kubernetes cluster access.
+
+**Decrypt kube_config file:**
+
+Decrypts the encrypted kube_config file using the retrieved GPG_PASSPHRASE.
+
+**Extract branch name:**
+
+Extracts the branch name from the GitHub reference to determine the deployment environment.
+
+**Deploy application to AKS cluster:**
+
+Sets the Kubernetes configuration to use the decrypted kube_config file.
+Deletes the existing deployment in the production Kubernetes namespace to ensure a clean deployment.
+Updates the Docker image version placeholder in the deployment configuration file (prod-deployment.yml) with the latest Docker image version (GitHub SHA).
+Applies the updated deployment configuration to deploy the application to the production Kubernetes cluster.
+
 ## Notes:
 HashiCorp Vault serves as a critical component in the CI/CD pipeline, enabling secure secret management, seamless integration with external services, and compliance with security best practices.
